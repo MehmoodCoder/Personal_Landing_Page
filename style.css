@@ -26,7 +26,6 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
-/* Flexbox for Navigation */
 nav {
     margin-top: 1rem;
     display: flex;
@@ -78,7 +77,6 @@ img {
     margin: 0 auto;
 }
 
-/* Flexbox for Cards Section */
 .cards {
     display: flex;
     justify-content: center;
