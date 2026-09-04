@@ -8,22 +8,24 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f7f6;
-    color: #333333;
+    background-color: #0b0f19;
+    color: #e2e8f0;
     line-height: 1.6;
 }
 
 header {
-    background-color: #0f172a;
+    background-color: #151c2c;
     color: #ffffff;
     padding: 2rem 1rem;
     text-align: center;
+    border-bottom: 1px solid #1e293b;
 }
 
 h1 {
     font-size: 2.5rem;
     letter-spacing: 2px;
     margin-bottom: 0.5rem;
+    color: #f8fafc;
 }
 
 nav {
@@ -52,21 +54,22 @@ main {
 }
 
 .about {
-    background-color: #ffffff;
+    background-color: #1e293b;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
     margin-bottom: 2rem;
+    border: 1px solid #334155;
 }
 
 h2 {
-    color: #0f172a;
+    color: #38bdf8;
     margin-bottom: 1rem;
 }
 
 p {
     margin-bottom: 1.5rem;
-    color: #475569;
+    color: #cbd5e1;
 }
 
 img {
@@ -75,6 +78,7 @@ img {
     border-radius: 8px;
     display: block;
     margin: 0 auto;
+    border: 1px solid #334155;
 }
 
 .cards {
@@ -85,21 +89,23 @@ img {
 }
 
 .card {
-    background-color: #ffffff;
+    background-color: #1e293b;
     flex: 1 1 250px;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid #334155;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+    border-color: #38bdf8;
 }
 
 .card h3 {
-    color: #0f172a;
+    color: #38bdf8;
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
 }
@@ -107,15 +113,17 @@ img {
 .card p {
     font-size: 0.9rem;
     margin-bottom: 0;
+    color: #94a3b8;
 }
 
 footer {
-    background-color: #0f172a;
-    color: #94a3b8;
+    background-color: #151c2c;
+    color: #64748b;
     text-align: center;
     padding: 1.5rem;
     margin-top: 3rem;
     font-size: 0.9rem;
+    border-top: 1px solid #1e293b;
 }
 
 @media (max-width: 768px) {
