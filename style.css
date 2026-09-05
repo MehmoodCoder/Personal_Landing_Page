@@ -109,6 +109,56 @@ img {
   border: 1px solid #334155;
 }
 
+.quote-section {
+  background-color: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+
+#quote-box {
+  background-color: #151c2c;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  text-align: center;
+}
+
+#quote-text {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #f8fafc;
+  margin-bottom: 0.75rem;
+}
+
+#quote-author {
+  color: #38bdf8;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+#new-quote {
+  background-color: #00c864;
+  color: #0b0f19;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+#new-quote:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
 .tab-switcher-section {
   background-color: #1e293b;
   padding: 2rem;
@@ -315,7 +365,8 @@ footer {
   .about,
   .card,
   .grid-card,
-  .tab-switcher-section {
+  .tab-switcher-section,
+  .quote-section {
     padding: 1.2rem;
   }
 

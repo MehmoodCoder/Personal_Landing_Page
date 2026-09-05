@@ -4,10 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const allCards = document.querySelectorAll(".card");
     const firstCard = document.querySelector(".card");
 
-    console.log("=== DOM SELECTION DEMO ===");
-    console.log("Selected Hero Title:", heroTitle);
-    console.log("Selected Cards Count:", allCards.length);
-
     if (firstCard) {
         firstCard.classList.add("highlighted");
     }
@@ -17,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tabButtons.forEach((button) => {
         button.addEventListener("click", () => {
-            
             tabButtons.forEach((btn) => btn.classList.remove("active"));
             tabPanels.forEach((panel) => panel.classList.remove("active"));
 
@@ -32,7 +27,46 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    console.log("=== TAB SWITCHER INITIALIZED SUCCESSFULLY ===");
+    const quoteText = document.getElementById("quote-text");
+    const quoteAuthor = document.getElementById("quote-author");
+    const newQuoteBtn = document.getElementById("new-quote");
+
+    function getQuote() {
+        if (!quoteText || !quoteAuthor) return;
+
+        quoteText.textContent = "Loading quote...";
+        quoteAuthor.textContent = "";
+
+        fetch("https://dummyjson.com/quotes/random")
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Network response failed");
+                }
+                return response.json();
+            })
+            .then((data) => {
+                quoteText.textContent = `"${data.quote}"`;
+                quoteAuthor.textContent = `- ${data.author}`;
+            })
+            .catch((error) => {
+                fetch("https://api.quotable.io/random")
+                    .then((res) => res.json())
+                    .then((fallbackData) => {
+                        quoteText.textContent = `"${fallbackData.content}"`;
+                        quoteAuthor.textContent = `- ${fallbackData.author}`;
+                    })
+                    .catch(() => {
+                        quoteText.textContent = "\"Continuous learning is the key to unlocking potential.\"";
+                        quoteAuthor.textContent = "- GrowthLift Mentor";
+                    });
+            });
+    }
+
+    getQuote();
+
+    if (newQuoteBtn) {
+        newQuoteBtn.addEventListener("click", getQuote);
+    }
 });
 
 
